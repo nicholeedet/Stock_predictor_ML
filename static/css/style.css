@@ -1,10 +1,21 @@
-html,body{
-    margin: 0;
-}
-body{
-    padding: 1px;
-}
+html, body{margin: 0; padding: 0;}
 
 header{
     background-color:#001a33;
+    color: whitesmoke;
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100%;
+}
+
+.search-logo{
+    display: flex;
+}
+.logo{
+    flex:1;
+}
+.searchbar{
+    flex: 1;
+    margin:auto;
 }
