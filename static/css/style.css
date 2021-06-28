@@ -12,10 +12,23 @@ header{
 .search-logo{
     display: flex;
 }
+
+.logo-container{
+    flex: 1;
+    border: 2px red dotted;
+}
 .logo{
-    flex:1;
+    text-align: right;
 }
 .searchbar{
-    flex: 1;
+    flex: 2;
     margin:auto;
+    border: 2px red dotted;
+}
+
+.searchbar input{
+    padding: 10px 10px; 
+    line-height: 18px;
+    border-radius: 10px;
+    width: 65%;
 }
