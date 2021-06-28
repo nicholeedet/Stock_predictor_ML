@@ -27,9 +27,9 @@ header{
     flex: 1;
     border: 2px red dotted;
 }
-.logo{
+.logo-container img{
     text-align: right;
-    padding-right: 20px;
+    float: right;
 }
 .searchbar{
     flex: 2;
