@@ -26,22 +26,25 @@ header{
 .logo-container{
     flex: 1;
     border: 2px red dotted;
+    padding-right: 9%;
+    text-align: right;
+    align-items:center;
 }
 .logo-container img{
-    text-align: right;
     float: right;
 }
 .searchbar{
     flex: 2;
     margin:auto;
     border: 2px red dotted;
+    padding-left: 20px;
 }
 
 .searchbar input{
     padding: 8px 8px; 
     line-height: 8px;
     border-radius: 10px;
-    width: 65%;
+    width: 75%;
     background-color: #253b50;
     font-size: 18px;
 }
