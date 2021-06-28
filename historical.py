@@ -12,6 +12,6 @@ def get_historical(ticker="AAPL"):
     print(df.shape)
     print(df.iloc[0])
     df = df[["date","open","high","low","close"]]
-    df.to_csv()
-    
+    df.to_csv("historical_csv.csv",index=False)
+
 get_historical("AAPL")
