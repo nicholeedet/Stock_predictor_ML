@@ -57,16 +57,22 @@ header{
     font-size: 18px;
 }
 
+/* navigation styles start here */
+header{
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width:100%;
+}
+
 /* nav */
 nav{
     width:50%;
     border: 2px white dotted;
     margin:auto;
+    text-align: left;
 }
 
-/* navigation styles start here */
-header{
-    text-align: center;
-    position: fixed;
-    width:100%;
+nav ul{
+    
 }
