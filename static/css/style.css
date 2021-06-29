@@ -11,7 +11,7 @@
 html, body{margin: 0; padding: 0;}
 
 header{
-    background-color:#001a33;
+    background-color:#011424;
     color: whitesmoke;
     position:absolute;
     left:0;
@@ -53,6 +53,13 @@ header{
     line-height: 8px;
     border-radius: 10px;
     width: 75%;
-    background-color: #253b50;
+    background-color: #283241;
     font-size: 18px;
+}
+
+/* nav */
+nav{
+    width:50%;
+    border: 2px white dotted;
+    margin:auto;
 }
