@@ -63,3 +63,10 @@ nav{
     border: 2px white dotted;
     margin:auto;
 }
+
+/* navigation styles start here */
+header{
+    text-align: center;
+    position: fixed;
+    width:100%;
+}
