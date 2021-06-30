@@ -26,7 +26,7 @@ header{
 .logo-container{
     flex: 1;
     display: flex;
-    border: 2px red dotted;
+    /* border: 2px red dotted; */
     text-align: left;
     align-items:center;
 }
@@ -44,7 +44,7 @@ header{
 .searchbar{
     flex: 2;
     margin:auto;
-    border: 2px red dotted;
+    /* border: 2px red dotted; */
     padding-left: 20px;
 }
 
@@ -68,7 +68,7 @@ header{
 /* nav */
 nav{
     width:50%;
-    border: 2px white dotted;
+    /* border: 2px white dotted; */
     margin:auto;
     text-align: left;
     display: flex;
