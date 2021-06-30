@@ -83,3 +83,14 @@ nav li{
     margin-bottom: 1em;
     margin-left: 1em;
 }
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: rgb(50, 12, 218);
+}
