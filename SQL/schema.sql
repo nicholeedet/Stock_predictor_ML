@@ -4,12 +4,15 @@
 
 
 CREATE TABLE "stock" (
-    "id" int   NOT NULL,
-    "date" date   NOT NULL,
-    "close/last" decimal   NOT NULL,
-    "open" decimal   NOT NULL,
-    "high" decimal   NOT NULL,
-    "low" decimal,   NOT NULL,
+    CREATE TABLE "stock" (
+    id SERIAL,
+    "stock_id" int   ,
+    "date" varchar,
+	"close" decimal   ,
+    "open" decimal   ,
+    "low" decimal   ,
+    "high" decimal   );
+
     CONSTRAINT "pk_stock" PRIMARY KEY (
         "id"
      )
