@@ -67,12 +67,18 @@ header{
 
 /* nav */
 nav{
+    margin-top: 0;
+    padding: 0;
     width:50%;
     /* border: 2px white dotted; */
     margin:auto;
     text-align: left;
     display: flex;
     justify-content: left ;
+}
+.mainMenu{
+    margin:0;
+    padding: 0;;
 }
 nav .mainMenu{
     display: flex;
