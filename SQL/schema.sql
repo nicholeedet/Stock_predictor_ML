@@ -19,11 +19,11 @@ CREATE TABLE "stock" (
 );
 
 CREATE TABLE "ticker" (
-    "id" int   NOT NULL,
+    "stock_id" int   NOT NULL,
     "name" varchar   NOT NULL,
     "symbol" varchar   NOT NULL,
     CONSTRAINT "pk_ticker" PRIMARY KEY (
-        "id"
+        "stock_id"
      )
 );
 
