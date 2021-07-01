@@ -59,13 +59,16 @@ header{
     flex-grow: 1;
     padding: 3px 8px 3px 8px; 
     line-height: 8px;
-    border-radius: 6px;
     background-color: #283241;
     font-size: 18px;
+    border:0;
+    color: whitesmoke;
 }
 
-.search-bar submit_btn{
+.search-bar .searchbar-submit{
     cursor: pointer;
+    border: 0;
+    background: #283241;
 }
 
 /* navigation styles start here */
@@ -138,8 +141,11 @@ nav .mainMenu .closeMenu , .icons i{
     .search-logo{
         flex-direction: column;
     }
-    .logo-container{
+    .logo-container, .searchbar{
         margin: auto;
+    }
+    .search-bar{
+        width: 100%;
     }
     nav .mainMenu{
         height: 100vh;
