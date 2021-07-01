@@ -2,7 +2,19 @@ import json
 import requests
 import pandas as pd
 from pprint import pprint
-from config import keys
+from config import api_keys, password
+from sqlalchemy import create_engine
+from sqlalchemy.sql import text
+
+# Connecting to Database
+connection_string = f"root:{password}@stock-predictor-ml-db.c3dvcigvu6ok.us-east-2.rds.amazonaws.com:5432/postgres"
+engine = create_engine(f'postgresql://{connection_string}')
+
+def get_tickers():
+    df = pd.read_sql_query('select * from ticker', con=engine)
+    new_df = df['name'] + " "  + df['symbol']
+    print(new_df)
+
 
 def get_historical(ticker="AAPL"):
     url = f"https://financialmodelingprep.com/api/v3/historical-price-full/{ticker}?apikey={keys[0]}"
@@ -15,4 +27,4 @@ def get_historical(ticker="AAPL"):
     df = df[["date","open","high","low","close"]]
     df.to_csv("./Historical_Data/historical_FB.csv",index=False)
 
-get_historical("FB")
+get_tickers()
