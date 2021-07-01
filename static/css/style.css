@@ -44,11 +44,11 @@ header{
 .searchbar{
     flex: 2;
     margin:auto;
-    /* border: 2px red dotted; */
     padding-left: 20px;
 }
 
 .searchbar input{
+    float: left;
     padding: 3px 8px 3px 8px; 
     line-height: 8px;
     border-radius: 6px;
