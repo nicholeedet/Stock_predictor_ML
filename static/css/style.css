@@ -49,8 +49,9 @@ header{
 }
 
 .search-bar{
-    border: 2px solid orange;
+    border: 2px solid rgb(22, 149, 172);
     display: flex;
+    width: 75%;
 }
 
 .search-bar input{
@@ -64,7 +65,7 @@ header{
 }
 
 .search-bar submit_btn{
-
+    cursor: pointer;
 }
 
 /* navigation styles start here */
