@@ -27,5 +27,11 @@ def index():
     """Index - Landing Page"""
     return render_template("index.html")
 
+#################################################
+# API generators                               #
+###############################################
+
+
+
 if __name__ == "__main__":
     app.run()
