@@ -11,7 +11,7 @@
 html, body{margin: 0; padding: 0;}
 
 header{
-    background-color:#011424;
+    background-color:#031b2e;
     color: whitesmoke;
     position:absolute;
     left:0;
@@ -123,6 +123,12 @@ nav .mainMenu .closeMenu , .icons i{
 @media(max-width: 800px){
     nav{
         margin-left: 0;
+    }
+    .search-logo{
+        flex-direction: column;
+    }
+    .logo-container{
+        margin: auto;
     }
     nav .mainMenu{
         height: 100vh;
