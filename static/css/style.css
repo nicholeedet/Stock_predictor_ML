@@ -44,7 +44,9 @@ header{
 .searchbar{
     flex: 2;
     margin:auto;
+    margin-left: 6px;
     padding-left: 20px;
+    border: 2px solid orange;
 }
 
 .searchbar input{
