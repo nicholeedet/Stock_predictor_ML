@@ -46,17 +46,25 @@ header{
     margin:auto;
     margin-left: 6px;
     padding-left: 20px;
-    border: 2px solid orange;
 }
 
-.searchbar input{
+.search-bar{
+    border: 2px solid orange;
+    display: flex;
+}
+
+.search-bar input{
     float: left;
+    flex-grow: 1;
     padding: 3px 8px 3px 8px; 
     line-height: 8px;
     border-radius: 6px;
-    width: 75%;
     background-color: #283241;
     font-size: 18px;
+}
+
+.search-bar submit{
+
 }
 
 /* navigation styles start here */
