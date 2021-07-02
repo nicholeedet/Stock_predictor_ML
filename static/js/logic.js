@@ -15,6 +15,9 @@ inputBox.onkeyup = (e) =>{
             return data = '<li>' + data + '</li>';
         });
         console.log(emptyArray);
+        searchWrapper.classList.add("active");
+    }else{
+
     }
     showSuggestions(emptyArray);
 }
