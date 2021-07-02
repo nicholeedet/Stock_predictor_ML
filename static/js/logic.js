@@ -25,7 +25,8 @@ inputBox.onkeyup = (e) =>{
 function showSuggestions(list){
     let listData;
     if(!list.length){
-        listData = 'No results';
+        uservValue = inputBox.value;
+        listData = '<li>'+ uservValue + '</li>';
     }else{
         listData = list.join('');
     }
