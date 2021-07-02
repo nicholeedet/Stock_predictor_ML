@@ -26,7 +26,7 @@ CORS(app)
 @app.route("/")
 def index():
     """Index - Landing Page"""
-    return render_template("index.html")
+    return render_template("base.html")
 
 #################################################
 # API generators                               #
