@@ -2,6 +2,8 @@ import json
 import requests
 import pandas as pd
 from pprint import pprint
+
+from requests.models import DecodeError
 from config import api_keys, password
 from sqlalchemy import create_engine
 from sqlalchemy.sql import text
@@ -13,11 +15,10 @@ engine = create_engine(f'postgresql://{connection_string}')
 def get_tickers():
     df = pd.read_sql_query('select * from ticker', con=engine)
     new_df = df['name'] + " "  + df['symbol']
-    print(new_df)
-
+    return new_df.tolist()
 
 def get_historical(ticker="AAPL"):
-    url = f"https://financialmodelingprep.com/api/v3/historical-price-full/{ticker}?apikey={keys[0]}"
+    url = f"https://financialmodelingprep.com/api/v3/historical-price-full/{ticker}?apikey={api_keys[0]}"
     result = requests.get(url).json()
     df = pd.DataFrame(result['historical'])
     print(result['symbol'])

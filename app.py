@@ -2,6 +2,7 @@ import json, glob, os
 import pandas as pd
 import numpy as np
 import urllib.request
+import historical
 
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -25,7 +26,17 @@ CORS(app)
 @app.route("/")
 def index():
     """Index - Landing Page"""
-    return render_template("index.html")
+    return render_template("base.html")
+
+#################################################
+# API generators                               #
+###############################################
+
+@app.route("/list_tickers")
+def list_tickers():
+    """Returns a list with Ticker names and their symbols"""
+    return jsonify(historical.get_tickers())
+
 
 if __name__ == "__main__":
     app.run()
