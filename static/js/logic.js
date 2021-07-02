@@ -8,8 +8,12 @@ inputBox.onkeyup = (e) =>{
     let emptyArray = [];
     if(userData){
         emptyArray = suggestions.filter((data)=>{
-            return data.toLocaleLowerCase()
+            // filtering array value and user char to lowercase and return only those word/sentence that starts with the users input
+            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
         });
-        console.log(emptyArray);
+        emptyArray = emptyArray.map((data)=>{
+            return data = '<li>' + data + '</li>';
+        });
+        console.log(emptyArray)
     }
 }
