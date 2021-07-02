@@ -28,6 +28,12 @@ inputBox.onkeyup = (e) =>{
     
 }
 
+function select(element){
+    let selectUserData = element.textContent;
+    inputBox.value = selectUserData;
+    searchWrapper.classList.remove("active")
+}
+
 function showSuggestions(list){
     let listData;
     if(!list.length){
