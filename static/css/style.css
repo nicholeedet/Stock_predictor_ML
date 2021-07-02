@@ -70,6 +70,7 @@ header{
     cursor: pointer;
     border: 0;
     background: #283241;
+    color: rgb(208, 219, 221);
 }
 .autocom-box{
     position: absolute;
