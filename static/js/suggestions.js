@@ -1,1 +1,1 @@
-let suggestions = ["Tesla TSLA","Apple AAPL","Amazon AMZN","Microsoft MSFT","Nio Limited NIO","NVDA NVDA","Moderna MRNA","Nikola NKLA","Facebook FB","Advance Micro Devices  AMD"]
+var suggestions = ["Tesla TSLA","Apple AAPL","Amazon AMZN","Microsoft MSFT","Nio Limited NIO","NVDA NVDA","Moderna MRNA","Nikola NKLA","Facebook FB","Advance Micro Devices  AMD"]
