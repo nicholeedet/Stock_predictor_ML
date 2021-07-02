@@ -63,6 +63,7 @@ header{
     font-size: 18px;
     border:0;
     color: whitesmoke;
+    outline: none;
 }
 
 .search-bar .searchbar-submit{
@@ -80,6 +81,7 @@ header{
     background: whitesmoke;
     width: 49.3%;
     border-radius: 0 0 5px 5px;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0,0.9);
 }
 
 
