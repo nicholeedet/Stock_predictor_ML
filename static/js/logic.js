@@ -17,7 +17,7 @@ inputBox.onkeyup = (e) =>{
         console.log(emptyArray);
         searchWrapper.classList.add("active");
     }else{
-
+        searchWrapper.classList.remove("active"); // hide autocomplete box
     }
     showSuggestions(emptyArray);
 }
