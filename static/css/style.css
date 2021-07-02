@@ -99,7 +99,7 @@ header{
     display: none;
 }
 
-.search-bar input.active .autocom-box li{
+.searchbar.active .autocom-box li{
     display: block;
 }
 
