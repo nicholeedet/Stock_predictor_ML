@@ -14,6 +14,17 @@ inputBox.onkeyup = (e) =>{
         emptyArray = emptyArray.map((data)=>{
             return data = '<li>' + data + '</li>';
         });
-        console.log(emptyArray)
+        console.log(emptyArray);
     }
+    showSuggestions(emptyArray);
+}
+
+function showSuggestions(list){
+    let listData;
+    if(!list.length){
+        listData = 'No results';
+    }else{
+        listData = list.join('');
+    }
+    suggBox.innerHTML = listData;
 }
