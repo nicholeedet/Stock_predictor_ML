@@ -16,10 +16,16 @@ inputBox.onkeyup = (e) =>{
         });
         console.log(emptyArray);
         searchWrapper.classList.add("active");
+        showSuggestions(emptyArray);
+        let allList = suggBox.querySelectorAll('li');
+        for(var i=0; i< allList.length; i++){
+            // Adding OnClick event to results
+            allList[i].setAttribute("onclick","select(this)")
+        }
     }else{
         searchWrapper.classList.remove("active"); // hide autocomplete box
     }
-    showSuggestions(emptyArray);
+    
 }
 
 function showSuggestions(list){
