@@ -70,6 +70,18 @@ header{
     border: 0;
     background: #283241;
 }
+.autocom-box{
+    position: absolute;
+    /* display:none; */
+    z-index: 999;
+    float: left;
+    text-align: left;
+    color: gray;
+    background: whitesmoke;
+    width: 49.3%;
+    border-radius: 0 0 5px 5px;
+}
+
 
 /* navigation styles start here */
 header{

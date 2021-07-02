@@ -27,12 +27,12 @@
             <div class="searchbar">
                 <div class="search-bar">
                     <input type="text" placeholder="Symbol, eg. AAPL" aria-label="search">
-                    <div class="autocom-box">
-                        <ul class="tickers-list">
-                            <li>Some Text</li>
-                        </ul>
-                    </div>
                     <button class="searchbar-submit submit_btn" aria-label="submit search"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="autocom-box">
+                    {%for ticker in tickers%}  
+                        <li>{{ticker}}</li>
+                    {%endfor%}
                 </div>
             </div>            
         </div>
