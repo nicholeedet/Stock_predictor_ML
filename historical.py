@@ -28,4 +28,10 @@ def get_historical(ticker="AAPL"):
     df = df[["date","open","high","low","close"]]
     df.to_csv("./Historical_Data/historical_FB.csv",index=False)
 
-get_tickers()
+def get_historical_(ticker):
+    df = pd.read_sql_query('select * from ticker', con=engine)
+    id = df[df['symbol']==ticker]['stock_id'].values[0] # returning ID for the specified ticker(symbol)
+    print(id)
+
+
+get_historical_("AAPL")
