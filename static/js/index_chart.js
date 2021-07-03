@@ -1,6 +1,6 @@
 var chart = LightweightCharts.createChart(document.getElementById("chart"), {
 	width: $(document).width(),
-  height: $(document).height()*0.50,
+  height: $(document).height()*0.78,
 	layout: {
 		textColor: '#d1d4dc',
 		backgroundColor: '#000000',
