@@ -11,3 +11,18 @@
 	line-height: 18px;
 	font-weight: 300;
 }
+
+#presentation{
+    color: white;
+    position: absolute;
+	left: 50px;
+	top: 50px;
+	z-index: 11;
+    margin-left: 5%;
+    border: 2px red dotted;
+    width: 35%;
+}
+#presentation p{
+    font-size: 2.5rem;
+	font-weight: 600;   
+}
