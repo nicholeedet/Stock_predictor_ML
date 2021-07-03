@@ -1,4 +1,4 @@
-var chart = LightweightCharts.createChart(document.getElementById("chart"), {
+var chart_init = LightweightCharts.createChart(document.getElementById("chart"), {
 	width: $(document).width(),
   height: $(document).height()*0.78,
 	layout: {
@@ -32,7 +32,7 @@ var chart = LightweightCharts.createChart(document.getElementById("chart"), {
 	},
 });
 
-var areaSeries = chart.addAreaSeries({
+var areaSeries = chart_init.addAreaSeries({
   topColor: 'rgba(0, 230, 64, 0.7)',
   bottomColor: 'rgba(0, 230, 64, 0.04)',
   lineColor: 'rgba(0, 230, 64, 1)',
@@ -63,7 +63,7 @@ fetch('http://127.0.0.1:5000/get_historical/AAPL')
         return s.substr(s.length - 2);
     }
     
-    chart.subscribeCrosshairMove((param) => {
+    chart_init.subscribeCrosshairMove((param) => {
         if (param.time) {
             const price = param.seriesPrices.get(areaSeries);
             firstRow.innerText = 'APPLE' + '  ' + price.toFixed(2);
@@ -71,4 +71,21 @@ fetch('http://127.0.0.1:5000/get_historical/AAPL')
       else {
           firstRow.innerText = 'APPLE';
       }
+    });
+
+    chart_init.applyOptions({
+        handleScroll: {
+            mouseWheel: false,
+            pressedMouseMove: false,
+            handleScroll: false,
+        },
+        handleScale: {
+            axisPressedMouseMove: false,
+            mouseWheel: false,
+            pinch: false,
+        },
+    });
+    chart_init.applyOptions({
+        handleScroll: false,
+        handleScale: false,
     });
