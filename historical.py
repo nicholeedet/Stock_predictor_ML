@@ -34,9 +34,9 @@ def get_historical(ticker):
     df = pd.read_sql_query(f'select * from stock WHERE stock_id = {id}', con=engine)
     df = df.iloc[::-1]
     df.drop(['id', 'stock_id'], axis=1,inplace=True)
-    df.rename(columns={"date": "time"}, inplace=True)
-    df = df[["time","open","high","low","close"]]
-    df[["open","high","low","close"]] = df[["open","high","low","close"]].astype(float)
+    df.rename(columns={"date": "time","close":"value"}, inplace=True)
+    df = df[["time","value"]]
+    df[["value"]] = df[["value"]].astype(float)
     result = df.to_json(orient="records")
     parsed = json.loads(result)
     return (parsed) 
