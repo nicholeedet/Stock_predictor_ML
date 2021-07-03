@@ -38,6 +38,13 @@ def list_tickers():
     """Returns a list with Ticker names and their symbols"""
     return jsonify(historical.get_tickers())
 
+@app.route("/get_historical/<ticker>")
+def get_historical(ticker):
+    """Returns a list with historical data in JSON format"""
+    result = historical.get_historical(ticker)
+    return jsonify(result)
+
+
 
 if __name__ == "__main__":
     app.run()
