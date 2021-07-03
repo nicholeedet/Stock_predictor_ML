@@ -10,14 +10,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/charts.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <!-- lightweight charts -->
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
 
 </head>
 
 <body>
     <header>
         <div class="search-logo">
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
             <div class="logo-container">
                 <div class="logo-img">
                     <img src="../static/images/logo.png" alt="" width="100px" height="100px">
@@ -37,7 +41,6 @@
             </div>            
         </div>
         <nav>
-            <div class="openMenu"><i class="fa fa-bars"></i></div>
             <ul class="mainMenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -54,11 +57,15 @@
         
     </header>
     <!-- end header -->
-    <main>
-      
-    </main>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
     <script src="../static/js/navbar.js"></script>
     <script src="../static/js/suggestions.js"></script>
     <script src="../static/js/logic.js"></script>
+    <!-- initial chart on index page -->
+    <script src="../static/js/index_chart.js"></script>
 </body> 
 </html>

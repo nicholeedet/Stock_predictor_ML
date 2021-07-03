@@ -9,6 +9,10 @@
 }
 
 html, body{margin: 0; padding: 0;}
+body { 
+    padding-top: 140px; 
+    background-color: #283241;
+}
 
 header{
     background-color:#031b2e;
@@ -70,11 +74,10 @@ header{
     cursor: pointer;
     border: 0;
     background: #283241;
+    color: rgb(208, 219, 221);
 }
 .autocom-box{
     position: absolute;
-    /* display:none; */
-    z-index: 999;
     float: left;
     text-align: left;
     color: gray;
@@ -153,7 +156,7 @@ nav .mainMenu li a:hover{
     background-color: var(--bg-primary);
     color: rgb(131, 119, 187);
 } 
-nav .openMenu{
+.openMenu{
     font-size: 2rem;
     margin: 20px;
     display: none;
@@ -183,6 +186,9 @@ nav .mainMenu .closeMenu , .icons i{
     .search-bar{
         width: 100%;
     }
+    .searchbar{
+        padding-bottom: 5px;
+    }
     nav .mainMenu{
         height: 100vh;
         position: fixed;
@@ -203,7 +209,10 @@ nav .mainMenu .closeMenu , .icons i{
         top: 20px;
         right: 20px;
     }
-    nav .openMenu{
+    .openMenu{
+        position: absolute;
+        top:0;
+        left: 0;
         display: block;
     }
     nav .mainMenu li a:hover{

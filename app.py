@@ -27,7 +27,7 @@ CORS(app)
 def index():
     """Index - Landing Page"""
     tickers_ = historical.get_tickers()
-    return render_template("base.html", tickers=tickers_)
+    return render_template("index.html", tickers=tickers_)
 
 #################################################
 # API generators                               #
@@ -37,6 +37,13 @@ def index():
 def list_tickers():
     """Returns a list with Ticker names and their symbols"""
     return jsonify(historical.get_tickers())
+
+@app.route("/get_historical/<ticker>")
+def get_historical(ticker):
+    """Returns a list with historical data in JSON format"""
+    result = historical.get_historical(ticker)
+    return jsonify(result)
+
 
 
 if __name__ == "__main__":
