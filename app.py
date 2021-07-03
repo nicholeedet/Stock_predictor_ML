@@ -1,7 +1,5 @@
-import json, glob, os
 import pandas as pd
 import numpy as np
-import urllib.request
 import historical
 
 from sqlalchemy.ext.automap import automap_base
