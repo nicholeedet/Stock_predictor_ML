@@ -90,3 +90,10 @@ fetch('http://127.0.0.1:5000/get_historical/AAPL')
         handleScroll: false,
         handleScale: false,
     });
+
+    // handling onresize event(chart's dimensions will be readjusted)
+    $(window).on('resize', function(){
+        var new_width = $(".container").width();
+        var new_height= $(window).height()-$(document.getElementsByTagName("header")).height();
+        chart_init.resize(new_width, new_height);
+    });
