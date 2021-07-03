@@ -17,7 +17,7 @@ def get_tickers():
     new_df = df['name'] + " "  + df['symbol']
     return new_df.tolist()
 
-def get_historical(ticker="AAPL"):
+def get_historical_(ticker="AAPL"):
     url = f"https://financialmodelingprep.com/api/v3/historical-price-full/{ticker}?apikey={api_keys[0]}"
     result = requests.get(url).json()
     df = pd.DataFrame(result['historical'])
@@ -28,13 +28,18 @@ def get_historical(ticker="AAPL"):
     df = df[["date","open","high","low","close"]]
     df.to_csv("./Historical_Data/historical_FB.csv",index=False)
 
-def get_historical_(ticker):
+def get_historical(ticker):
     df = pd.read_sql_query('select * from ticker', con=engine)
     id = df[df['symbol']==ticker]['stock_id'].values[0] # returning ID for the specified ticker(symbol)
     df = pd.read_sql_query(f'select * from stock WHERE stock_id = {id}', con=engine)
     df = df.iloc[::-1]
     df.drop(['id', 'stock_id'], axis=1,inplace=True)
-    print(df)
+    df.rename(columns={"date": "time"}, inplace=True)
+    df = df[["time","open","high","low","close"]]
+    df[["open","high","low","close"]] = df[["open","high","low","close"]].astype(float)
+    result = df.to_json(orient="records")
+    parsed = json.loads(result)
+    return (parsed) 
 
 
-get_historical_("AAPL")
+get_historical("AAPL")
