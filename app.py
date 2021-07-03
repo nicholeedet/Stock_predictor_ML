@@ -29,6 +29,11 @@ def index():
     tickers_ = historical.get_tickers()
     return render_template("index.html", tickers=tickers_)
 
+@app.route("/jupyter")
+def jupyter():
+    """code - Jupyter Notebook file"""
+    return render_template("jupyter.html")
+
 @app.route("/code")
 def code():
     """code - Jupyter Notebook file"""
