@@ -27,7 +27,7 @@ CORS(app)
 def index():
     """Index - Landing Page"""
     tickers_ = historical.get_tickers()
-    return render_template("base.html", tickers=tickers_)
+    return render_template("index.html", tickers=tickers_)
 
 #################################################
 # API generators                               #
