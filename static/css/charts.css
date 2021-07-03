@@ -1,7 +1,7 @@
 #chart{
-    position: relative;
+    position: relative; 
 }
-
+/* position absolute to #chart, this will allow to place legend on top of #chart */
 .legend {
 	position: absolute;
 	left: 12px;
