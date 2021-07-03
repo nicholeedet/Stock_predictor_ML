@@ -74,8 +74,6 @@ header{
 }
 .autocom-box{
     position: absolute;
-    /* display:none; */
-    z-index: 999;
     float: left;
     text-align: left;
     color: gray;
