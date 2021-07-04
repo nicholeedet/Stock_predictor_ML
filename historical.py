@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.sql import text
 
 # Connecting to Database
-connection_string = f"root:{password}@stock-predictor-ml-db.c3dvcigvu6ok.us-east-2.rds.amazonaws.com:5432/postgres"
+connection_string = f"ofygklqv:{password}@batyr.db.elephantsql.com:5432/ofygklqv"
 engine = create_engine(f'postgresql://{connection_string}')
 
 def get_tickers():
