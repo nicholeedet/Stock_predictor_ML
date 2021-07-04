@@ -10,7 +10,8 @@ from sqlalchemy.sql import text
 
 # Connecting to Database
 connection_string = f"ofygklqv:{password}@batyr.db.elephantsql.com:5432/ofygklqv"
-engine = create_engine(f'postgresql://{connection_string}')
+engine = create_engine(f'postgresql://{connection_string}', pool_size=2, pool_recycle=1200, connect_args={'connect_timeout': 10},
+client_encoding="utf8", pool_pre_ping=True)
 
 def get_tickers():
     df = pd.read_sql_query('select * from ticker', con=engine)
