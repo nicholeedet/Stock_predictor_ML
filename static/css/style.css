@@ -21,6 +21,7 @@ header{
     left:0;
     top:0;
     width: 100%;
+    border-bottom:2px solid rgb(232, 234, 235,0.6);
 }
 
 .search-logo{
