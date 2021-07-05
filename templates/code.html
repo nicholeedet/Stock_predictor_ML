@@ -1,0 +1,21 @@
+<title>Model</title>
+<style>
+    html {
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+        background: #FF0000;
+    }
+</style>
+{% extends "base.html" %}
+
+{%block content%}
+<iframe src="http://127.0.0.1:5000/jupyter" style="border: none;width: 100%; min-height: 83vh;"></iframe>
+  
+{% endblock %}

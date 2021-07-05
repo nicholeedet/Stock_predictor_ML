@@ -11,3 +11,24 @@
 	line-height: 18px;
 	font-weight: 300;
 }
+
+#presentation{
+    color: white;
+    position: absolute;
+	left: 50px;
+	top: 50px;
+	z-index: 11;
+    margin-left:25%;
+    width: 50%;
+}
+.presentation-logo img{
+  width: 100%;   
+  max-width: 450px;
+}
+
+
+@media(max-width: 800px){
+    #presentation{
+        margin:auto;
+    }
+}
