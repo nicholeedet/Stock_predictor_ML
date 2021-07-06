@@ -1,0 +1,5 @@
+    pre { line-height: 125%; font-size: 14px;}
+	.highlight hl-ipython3, pre{
+	overflow: auto;
+	}
+  .py-modules{color:orange; font-style: italic;}
