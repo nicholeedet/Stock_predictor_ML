@@ -40,7 +40,8 @@ def code():
 @app.route("/models/<ticker>")
 def models(ticker):
     """models - It renders Our Jupyter Notebook Wrapper"""
-    return render_template("models.html", ticker_=ticker)
+    url = f"http://127.0.0.1:5000/render-models/{ticker}"
+    return render_template("models.html", ticker_=url)
 
 @app.route("/render-models/<ticker>")
 def render_models(ticker):
@@ -59,7 +60,7 @@ def list_tickers():
 @app.route("/get_historical/<ticker>")
 def get_historical(ticker):
     """Returns a list with historical data in JSON format"""
-    result = historical.get_historical(ticker, ticker_ = ticker)
+    result = historical.get_historical(ticker)
     return jsonify(result)
 
 
