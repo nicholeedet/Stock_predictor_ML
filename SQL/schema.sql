@@ -28,7 +28,7 @@ CREATE TABLE "ticker" (
 CREATE TABLE "predicted" (
     "stock_id" int   NOT NULL,
     "close" decimal NOT NULL,
-    "value" decimal NOT NULL,
+    "predictions" decimal NOT NULL,
     CONSTRAINT "pk_predicted" PRIMARY KEY (
         "stock_id"
      )
