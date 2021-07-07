@@ -24,3 +24,11 @@ CREATE TABLE "ticker" (
         "stock_id"
      )
 );
+
+CREATE TABLE "predicted" (
+    "stock_id" int   NOT NULL,
+    "value" varchar   NOT NULL,
+    CONSTRAINT "pk_predicted" PRIMARY KEY (
+        "stock_id"
+     )
+);
