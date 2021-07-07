@@ -36,7 +36,7 @@ def companies():
 @app.route("/jupyter")
 def jupyter():
     """code - Jupyter Notebook file"""
-    return render_template("Stockprer-Tesla.html")
+    return render_template("TSLA.html")
 
 @app.route("/code")
 def code():
