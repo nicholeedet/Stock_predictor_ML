@@ -27,10 +27,16 @@ def index():
     tickers_ = historical.get_tickers()
     return render_template("index.html", tickers=tickers_)
 
+@app.route("/companies")
+def companies():
+    """companies - Displays the available models"""
+    tickers_ = historical.get_tickers()
+    return render_template("companies.html")
+
 @app.route("/jupyter")
 def jupyter():
     """code - Jupyter Notebook file"""
-    return render_template("Stockprer-Tesla.html")
+    return render_template("TSLA.html")
 
 @app.route("/code")
 def code():
