@@ -37,6 +37,10 @@ def code():
     """code - Jupyter Notebook file"""
     return render_template("code.html")
 
+@app.route("/models/<ticker>")
+def models(ticker):
+    """models - It rendes our jupyter Notebooks html files"""
+    return render_template("models.html")
 
 #################################################
 # API generators                               #
@@ -50,7 +54,7 @@ def list_tickers():
 @app.route("/get_historical/<ticker>")
 def get_historical(ticker):
     """Returns a list with historical data in JSON format"""
-    result = historical.get_historical(ticker)
+    result = historical.get_historical(ticker, ticker_ = ticker)
     return jsonify(result)
 
 
