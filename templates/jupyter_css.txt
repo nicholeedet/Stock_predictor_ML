@@ -1,5 +1,11 @@
-    pre { line-height: 125%; font-size: 14px;}
+  pre { line-height: 125%; font-size: 14px;}
 	.highlight hl-ipython3, pre{
 	overflow: auto;
 	}
+  .jp-InputArea-prompt, jp-InputPrompt{color:blue;}
+  .jp-InputPrompt:hover{color: blue;}
+  .output_prompt{color:red;}
   .py-modules{color:orange; font-style: italic;}
+    pre { line-height: 125%; }
+  .jp-Cell-outputWrapper:hover{border:gray 1px solid; border-left: 3px solid orange;}
+  .jp-CodeMirrorEditor:hover{border: 1px solid gray; border-left: 3px solid var(--md-green-500);}px solid var(--md-green-500);}

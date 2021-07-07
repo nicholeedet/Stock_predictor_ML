@@ -38,9 +38,16 @@ def get_historical(ticker):
     df.rename(columns={"date": "time","close":"value"}, inplace=True)
     df = df[["time","value"]]
     df[["value"]] = df[["value"]].astype(float)
+    df['time'] = df['time'].apply(lambda x: pd.Timestamp(x).timestamp())
     result = df.to_json(orient="records")
     parsed = json.loads(result)
     return (parsed) 
 
-
-get_historical("AAPL")
+def get_descriptions():
+    tickers =["TSLA","AAPL","AMZN","MSFT","NIO","NVDA","MRNA","NKLA","FB","AMD"]
+    descriptions = []
+    for ticker in tickers:
+        url = f"https://financialmodelingprep.com/api/v3/profile/{ticker}?apikey=01220a885b2dd443a37bbefadc5022e2"
+        result = requests.get(url).json()
+        descriptions.append((ticker,result[0]['description']))
+    print(descriptions)

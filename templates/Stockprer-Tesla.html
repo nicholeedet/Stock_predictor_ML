@@ -9,7 +9,7 @@
 
 
 <style type="text/css">
-    pre { line-height: 125%; font-size: 14px;}
+      pre { line-height: 125%; font-size: 14px;}
 	.highlight hl-ipython3, pre{
 	overflow: auto;
 	}
@@ -19,7 +19,7 @@
   .py-modules{color:orange; font-style: italic;}
     pre { line-height: 125%; }
   .jp-Cell-outputWrapper:hover{border:gray 1px solid; border-left: 3px solid orange;}
-  .jp-CodeMirrorEditor:hover{border: 1px solid gray; border-left: 3px solid var(--md-green-500);}
+  .jp-CodeMirrorEditor:hover{border: 1px solid gray; border-left: 3px solid var(--md-green-500);}px solid var(--md-green-500);}
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
@@ -13312,7 +13312,7 @@ body.lm-mod-override-cursor .jp-OutputArea-output.jp-mod-isolated:before {
 
 .jp-InputPrompt {
   flex: 0 0 var(--jp-cell-prompt-width);
-  color: var(--md-blue-100);
+  color: var(--jp-cell-inprompt-font-color);
   font-family: var(--jp-cell-prompt-font-family);
   padding: var(--jp-code-padding);
   letter-spacing: var(--jp-cell-prompt-letter-spacing);
@@ -14225,9 +14225,7 @@ a.anchor-link {
 </style>
 
 
-  <script>
-    document.getElementsByClassName("jp-InputArea-prompt").style.color = "#ff0000";
-  </script>
+
 <!-- Load mathjax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML-full,Safe"> </script>
     <!-- MathJax configuration -->
@@ -14549,7 +14547,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 4: Splitting the data into Training/Test sets </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;">Once the data has been cleaned and filtered, we need to split the data into train and test data, since our model doesn't utilize more than one variable, we can't use train_test_split found in <span class="py-modules">skelearn</span> libray. We will use a 80-20 ratio for the splitting process.</p>
+<p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 4: Splitting the data into Training/Test sets </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;">Once the data has been cleaned and filtered, we need to split the data into train and test data, since our model doesn't utilize more than one variable, we can't use train_test_split found in <span class="py-modules">sklearn</span> libray. We will use a 80-20 ratio for the splitting process.</p>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14806,7 +14804,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 5: LSTM build</strong> </p> <p style="font-size:18px;color:gray;line-height:normal;">At this point our dataset is clean and scaled, this allows us to build the LSTM model that is going to process and predict the values. The 2 main parameters used are  optimizer=<span style="color:green;">'adam'</span> abn loss=<span style="color:green;">'mean_squared_error'</span>; found in the <span class="py-modules">LSTM</span> module</p>
+<p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 5: LSTM build</strong> </p> <p style="font-size:18px;color:gray;line-height:normal;">At this point our dataset is clean and scaled, this allows us to build the LSTM model that is going to process and predict the values. The 2 main parameters used are  optimizer=<span style="color:green;">'adam'</span> and loss=<span style="color:green;">'mean_squared_error'</span>; found in the <span class="py-modules">LSTM</span> module</p>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14847,8 +14845,8 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 6: Train Model
-    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;"></p>
+<p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 6: Training our Model
+    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;">It's time to train our model, this requires a x_train and y_train datasets, among other parameters. To see the meaning of these parameters please visit tensorflow's official website <a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM">https://www.tensorflow.org/api_docs/python/tf/keras/layers/LSTM</a> </p>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14964,7 +14962,7 @@ Epoch 2/2
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 7: Make/Perform the Predictions
-    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;"></p>
+    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;">To make our predictions we need make use of our x_test dataset, it's important to mention that this numpy array must be a 3 dimensional array(see description in cell above)</p>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -14987,8 +14985,8 @@ Epoch 2/2
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 8: Test Model on test data
-    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;"></p>
+<p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 8: Model Evaluation
+    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;">For the model evaluation we'll utilize RMSE as our main indicator</p>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15033,7 +15031,7 @@ Epoch 2/2
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 9: Plotting trained, tested and predicted datasets.
-    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;"></p>
+    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;">During this step we will use our training data, test data and predictions to easily visualize the accuracy of our model. Our training data represents the 80% of the original data set, and the teste data the rest; our predicted values has the same length as our test data but this data has been already processed by our model</p>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15128,7 +15126,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p style="font-size:18px;color:gray;"> <strong style="line-height: 0px;">Step 10: Saving Model(h5).
-    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;"></p>
+    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;">Finally that we've verified our model accuracy and performance we can save it.</p>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -15145,6 +15143,12 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p style="font-size:22px;color:black;text-align:center"> <strong style="line-height: 0px;">Conclusion
+    </strong> </p> <p style="font-size:18px;color:gray;line-height:normal;">LSTM can be applied to predict future stock values on different markets. Even though this model can be very accurate, this doesn't mean it can be used by itself to make decisions, this must be use in conjuntion with risk analysis, financial analysis and market evaluation. Please do not use this models as definitive tool to predict the market! </p>
+</div>
 </div>
 </body>
 
