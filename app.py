@@ -54,7 +54,7 @@ def list_tickers():
 @app.route("/get_historical/<ticker>")
 def get_historical(ticker):
     """Returns a list with historical data in JSON format"""
-    result = historical.get_historical(ticker)
+    result = historical.get_historical(ticker, ticker_ = ticker)
     return jsonify(result)
 
 
