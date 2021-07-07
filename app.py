@@ -46,7 +46,7 @@ def models(ticker):
 @app.route("/render-models/<ticker>")
 def render_models(ticker):
     """models - This Function renders a Jupyter Notebook html"""
-    return render_template(f"Stockprer-{ticker}.html")
+    return render_template(f"{ticker}.html")
 
 #################################################
 # API generators                               #
