@@ -37,15 +37,15 @@ def code():
     """code - Jupyter Notebook file"""
     return render_template("code.html")
 
-@app.route("/models/")
-def models():
-    """models - It rendes our jupyter Notebooks html files"""
-    return render_template("models.html")
+@app.route("/models/<ticker>")
+def models(ticker):
+    """models - It renders Our Jupyter Notebook Wrapper"""
+    return render_template("models.html", ticker_=ticker)
 
 @app.route("/render-models/<ticker>")
 def render_models(ticker):
-    """models - It rendes our jupyter Notebooks html files"""
-    return render_template("models.html", ticker_ = ticker)
+    """models - This Function renders a Jupyter Notebook html"""
+    return render_template(f"Stockprer-{ticker}.html")
 
 #################################################
 # API generators                               #
