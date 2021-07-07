@@ -38,12 +38,10 @@ def get_historical(ticker):
     df.rename(columns={"date": "time","close":"value"}, inplace=True)
     df = df[["time","value"]]
     df[["value"]] = df[["value"]].astype(float)
+    df['time'] = df['time'].apply(lambda x: pd.Timestamp(x).timestamp())
     result = df.to_json(orient="records")
     parsed = json.loads(result)
     return (parsed) 
-
-
-get_historical("AAPL")
 
 def get_descriptions():
     tickers =["TSLA","AAPL","AMZN","MSFT","NIO","NVDA","MRNA","NKLA","FB","AMD"]
