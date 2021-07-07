@@ -30,7 +30,7 @@ def index():
 @app.route("/jupyter")
 def jupyter():
     """code - Jupyter Notebook file"""
-    return render_template("jupyter.html")
+    return render_template("Stockpre_Tesla.html")
 
 @app.route("/code")
 def code():
