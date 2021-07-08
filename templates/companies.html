@@ -7,15 +7,15 @@
         <br><br>
         <div class="col">
             <div class="box-header">
-                <a href=""><h2>Tesla - TSLA</h2></a>
+                <a href="http://127.0.0.1:5000/models/{{ticker.symbol}}"><h2>{{ticker.name}} - {{ticker.symbol}}</h2></a>
 
             </div>
             <hr>
             <div class="company-logo">
-                <img src="../static/images/NKLA.png" alt="">
+                <img src="../static/images/{{ticker.symbol}}.png" alt="">
             </div>
             <div class="company-description">
-                <p class="text-descr">'Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, Netherlands, Norway, and internationally. The company operates in two segments, Automotive: and Energy Generation and Storage. The Automotive segment offers sedans and sport utility vehicles. It also provides electric powertrain components and systems; and services for electric vehicles through its company-owned service locations, and Tesla mobile service technicians, as well as sells used vehicles. This segment markets and sells its products through a network of company-owned stores and galleries, as well as through its own Website. The Energy Generation and Storage segment offers energy storage products, such as rechargeable lithium-ion battery systems for use in homes, industrial, commercial facilities, and utility grids; and designs, manufactures, installs, maintains, leases, and sells solar energy generation and energy storage products to residential and commercial customers. It also provides vehicle insurance services, as well as renewable energy. The company was formerly known as Tesla Motors, Inc. and changed its name to Tesla, Inc. in February 2017. Tesla, Inc. was founded in 2003 and is headquartered in Palo Alto, California.</p>
+                <p class="text-descr">{{ticker.description}}</p>
             </div>
         </div>
     </div>
