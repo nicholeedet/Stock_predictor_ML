@@ -45,12 +45,12 @@ fetch('http://127.0.0.1:5000/get_predicted/' + ticker)
     }).setData(response.train);
     // Setting second series
     chart.addLineSeries({
-        color: 'rgba(4, 23, 23, 1)',
+        color: 'rgba(255, 99, 71, 1)',
         lineWidth: 2,
     }).setData(response.test);
     // Setting predicted series
     chart.addLineSeries({
-        color: 'rgba(255, 99, 71, 1)',
+        color: 'rgba(60, 179, 113,1)',
         lineWidth: 2,
     }).setData(response.predicted);
 	});
