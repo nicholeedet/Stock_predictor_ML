@@ -58,5 +58,5 @@ fetch('http://127.0.0.1:5000/get_predicted/' + ticker)
    // handling onresize event(chart's dimensions will be readjusted)
    $(window).on('resize', function(){
     var new_width = $(".container").width();
-    chart.resize(new_width, new_height);
+    chart.resize(new_width, 400);
 });
