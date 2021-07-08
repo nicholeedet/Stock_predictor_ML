@@ -44,3 +44,14 @@ function showSuggestions(list){
     }
     suggBox.innerHTML = listData;
 }
+
+$( ".submit_btn" ).click(function() {
+    // alert( inputBox.value);
+    if (suggestions.includes(inputBox.value)){
+        const myarray = inputBox.value.split(" ");
+        var ticker = myarray[myarray.length-1];
+        window.open('http://127.0.0.1:5000/models/' + ticker);
+    }else{
+        alert("Please select a valid Company")
+    }
+  });
