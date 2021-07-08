@@ -41,7 +41,7 @@ header{
     text-align: right;
     float: right;
 }
-.logo-text{
+.logo-text a{
     font-size:20px;
     color: whitesmoke;
     text-decoration: none;
