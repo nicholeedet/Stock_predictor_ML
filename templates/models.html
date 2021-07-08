@@ -11,12 +11,15 @@
     ::-webkit-scrollbar-thumb {
         background: #FF0000;
     }
+    #jpn_chart{
+        background-color: white;
+    }
 </style>
 {% extends "base.html" %}
 
 {%block content%}
 <iframe src='{{ ticker_ }}' style="border: none;width: 100%; min-height: 83vh;"></iframe>
-<div id="chart"></div>
+<div id="jpn_chart"></div>
 <!-- Setting document title -->
 <script>
     document.title = "{{symbol}}"
