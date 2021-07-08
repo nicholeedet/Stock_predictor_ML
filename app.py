@@ -69,6 +69,12 @@ def get_historical(ticker):
     result = historical.get_historical(ticker)
     return jsonify(result)
 
+@app.route("/get_predicted/<ticker>")
+def get_predicted(ticker):
+    """Returns a list with predicted historical data in JSON format"""
+    result = historical.get_predicted(ticker)
+    return jsonify(result)
+
 
 
 if __name__ == "__main__":
