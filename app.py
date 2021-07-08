@@ -30,8 +30,8 @@ def index():
 @app.route("/companies")
 def companies():
     """companies - Displays the available models"""
-    tickers_ = historical.get_tickers()
-    return render_template("companies.html")
+    tickers_ = historical.get_descriptions()
+    return render_template("companies.html", tickers= tickers_)
 
 @app.route("/jupyter")
 def jupyter():
