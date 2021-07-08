@@ -44,6 +44,7 @@ header{
 .logo-text{
     font-size:20px;
     color: whitesmoke;
+    text-decoration: none;
 }
 
 .searchbar{
