@@ -47,7 +47,7 @@ def get_descriptions():
     tickers =["TSLA","AAPL","AMZN","MSFT","NIO","NVDA","MRNA","NKLA","FB","AMD"]
     descriptions = []
     for ticker in tickers:
-        url = f"https://financialmodelingprep.com/api/v3/profile/{ticker}?apikey=01220a885b2dd443a37bbefadc5022e2"
+        url = f"https://financialmodelingprep.com/api/v3/profile/{ticker}?apikey=14f90359650cd4c61f0f33af0a7564d6"
         result = requests.get(url).json()
         descriptions.append({"symbol":result[0]['symbol'],"name":result[0]['companyName'],"description":result[0]['description']})
     return(descriptions)
@@ -82,5 +82,3 @@ def get_predicted(ticker="AAPL"):
     result = predicted.to_json(orient="records")
     predicted_ = json.loads(result)
     return({"train":train,"test":test,"predicted":predicted_})
-
-get_descriptions()
