@@ -31,3 +31,11 @@ var chart = LightweightCharts.createChart(document.body, {
 		vertTouchDrag: true,
 	},
 });
+
+// Fetching api data from our flask app
+fetch('http://127.0.0.1:5000/get_historical/AAPL')
+	.then((r) => r.json())
+	.then((response) => {
+		console.log(response);
+		areaSeries.setData(response);
+	});

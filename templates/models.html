@@ -16,5 +16,9 @@
 
 {%block content%}
 <iframe src='{{ ticker_ }}' style="border: none;width: 100%; min-height: 83vh;"></iframe>
-  
+
+<!-- Setting document title -->
+<script>
+    document.title = "{{symbol}}"
+</script>
 {% endblock %}

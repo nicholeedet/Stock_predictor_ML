@@ -46,8 +46,9 @@ def code():
 @app.route("/models/<ticker>")
 def models(ticker):
     """models - It renders Our Jupyter Notebook Wrapper"""
+    symbol_ = ticker
     url = f"http://127.0.0.1:5000/render-models/{ticker}"
-    return render_template("models.html", ticker_=url)
+    return render_template("models.html", ticker_=url,symbol = symbol_ )
 
 @app.route("/render-models/<ticker>")
 def render_models(ticker):
