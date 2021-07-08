@@ -51,3 +51,33 @@ def get_descriptions():
         result = requests.get(url).json()
         descriptions.append((ticker,result[0]['description']))
     print(descriptions)
+
+def get_predicted(ticker="AAPL"):
+    df = pd.read_sql_query('select * from ticker', con=engine)
+    id = df[df['symbol']==ticker]['stock_id'].values[0] # returning ID for the specified ticker(symbol)
+    total_data =  pd.read_sql_query(f"select * from stock WHERE stock_id = {id}", con=engine)
+    total_data = total_data.iloc[::-1]
+    df = pd.read_sql_query(f'select * from predicted WHERE stock_id = {id}', con=engine)
+    total_data.rename(columns={"date":"time", "close":'value'},inplace=True)
+    total_data.filter(['time','value']) 
+    total_data['time'] = total_data['time'].apply(lambda x: pd.Timestamp(x).timestamp())
+    # obtaining predicted dataset length
+    ln = len(df)
+    #Obtaining training dataset
+    train_values = total_data.iloc[:len(total_data)-ln,:]
+    train_values= train_values.filter(['time','value'])
+    # getting dates for test data
+    test_values = total_data.tail(ln)
+    test_values['close'] = df['close'].tolist()
+    test_values['predictions'] = df['predictions'].tolist()
+    test_values = test_values.filter(['time','close','predictions'])
+    predicted = test_values[['time','predictions']]
+    test_values = test_values.filter(['time','close'])
+    result = train_values.to_json(orient="records")
+    train = json.loads(result)
+    result = test_values.to_json(orient="records")
+    test = json.loads(result)
+    result = predicted.to_json(orient="records")
+    predicted_ = json.loads(result)
+    return({"train":train,"test":test,"predicted":predicted_})
+    
