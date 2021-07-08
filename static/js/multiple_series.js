@@ -1,6 +1,6 @@
 var chart = LightweightCharts.createChart(document.getElementById("jpn_chart"), {
-	width: 600,
-  height: 300,
+	width: $(".container").width(),
+     height: 400,
 	rightPriceScale: {
 		visible: true,
     borderColor: 'rgba(197, 203, 206, 1)',
