@@ -5,8 +5,6 @@ __pycache__/
 # excluding API Keys and passwords
 # C extensions
 *.so
-config.py
-config.js
 # Distribution / packaging
 .Python
 build/
