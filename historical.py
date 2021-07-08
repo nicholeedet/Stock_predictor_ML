@@ -49,8 +49,8 @@ def get_descriptions():
     for ticker in tickers:
         url = f"https://financialmodelingprep.com/api/v3/profile/{ticker}?apikey=01220a885b2dd443a37bbefadc5022e2"
         result = requests.get(url).json()
-        descriptions.append((ticker,result[0]['description']))
-    print(descriptions)
+        descriptions.append({"symbol":result[0]['symbol'],"name":result[0]['companyName'],"description":result[0]['description']})
+    return(descriptions)
 
 def get_predicted(ticker="AAPL"):
     df = pd.read_sql_query('select * from ticker', con=engine)
@@ -82,4 +82,5 @@ def get_predicted(ticker="AAPL"):
     result = predicted.to_json(orient="records")
     predicted_ = json.loads(result)
     return({"train":train,"test":test,"predicted":predicted_})
-    
+
+get_descriptions()
