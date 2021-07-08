@@ -250,7 +250,25 @@ nav .mainMenu .closeMenu , .icons i{
 .col{
     padding: 5px;
     border-radius: 2px;
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 4px;
     color: var(--bg-secondary);
+    width: 65%;
+    margin: auto;
+}
+
+.box-header a{
+    text-align: center;
+    text-decoration: none;
+    color: rgb(96, 96, 109);
+    text-decoration: none;
+}
+.company-logo img{
+    width: 45%;
+    display:block;
+    margin:auto;
+}
+.text-descr{
+    margin: 2%;
+    color: gray;
 }
