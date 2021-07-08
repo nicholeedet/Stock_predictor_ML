@@ -246,3 +246,11 @@ nav .mainMenu .closeMenu , .icons i{
     background-color: #283747;
     color: whitesmoke;
 }
+
+.col{
+    padding: 5px;
+    border-radius: 2px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    color: var(--bg-secondary);
+}
