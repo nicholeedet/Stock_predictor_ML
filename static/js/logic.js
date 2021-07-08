@@ -50,7 +50,7 @@ $( ".submit_btn" ).click(function() {
     if (suggestions.includes(inputBox.value)){
         const myarray = inputBox.value.split(" ");
         var ticker = myarray[myarray.length-1];
-        window.open('http://127.0.0.1:5000/models/' + ticker);
+        window.open('https://stockprer.herokuapp.com//models/' + ticker);
     }else{
         alert("Please select a valid Company")
     }

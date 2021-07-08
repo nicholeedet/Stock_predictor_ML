@@ -41,7 +41,7 @@ var areaSeries = chart_init.addAreaSeries({
 });
 
 // Fetching api data from our flask app
-fetch('http://127.0.0.1:5000/get_historical/AAPL')
+fetch('https://stockprer.herokuapp.com//get_historical/AAPL')
 	.then((r) => r.json())
 	.then((response) => {
 		console.log(response);
