@@ -74,7 +74,7 @@ def get_predicted(ticker="AAPL"):
     predicted = test_values[['time','predictions']]
     test_values = test_values.filter(['time','close'])
     test_values.rename(columns={"close":"value"},inplace=True)
-    predicted.rename(columns={"predictions":"value"})
+    predicted.rename(columns={"predictions":"value"},inplace=True)
     result = train_values.to_json(orient="records")
     train = json.loads(result)
     result = test_values.to_json(orient="records")
