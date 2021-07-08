@@ -5,6 +5,8 @@
  <div class="wrapper" style="background-color: white">
     <div class="container-main">
         <br><br>
+        {%for ticker in tickers%}
+  
         <div class="col">
             <div class="box-header">
                 <a href="http://127.0.0.1:5000/models/{{ticker.symbol}}"><h2>{{ticker.name}} - {{ticker.symbol}}</h2></a>
@@ -18,6 +20,8 @@
                 <p class="text-descr">{{ticker.description}}</p>
             </div>
         </div>
+        {%endfor%}
+
     </div>
  </div>
 {% endblock %}
